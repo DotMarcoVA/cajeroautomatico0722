@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./login.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/50/50268.png"
+                        alt=""
+                        width="30"
+                        height="24"
+                        class="d-inline-block align-text-top"
+                    />
+                    Cajero Automatico
+                </a>
+            </div>
+        </nav>
+
+        <form action="" class="form" id="login">
+            <h3>Bienvenido</h3>
+            <h4>Introduzca sus datos</h4>
+
+            <div id="render" class="hide"><p>Datos incorrectos</p></div>
+
+            <input placeholder="Introduzca su Usuario" class="inputs" id="userAccount" type="text" />
+            <input placeholder="Introduzca su Contraseña" class="inputs" id="userPassword" type="password" />
+
+            <button id="btn" class="btn btn-outline-primary">Ingresar</button>
+        </form>
+
+        <div class="form2 hide" id="userData">
+            <h3>Tu saldo actual es de:</h3>
+            <input placeholder="Saldo" type="text" class="inputs" id="userBalance" readonly />
+            <h4>Ingrese la cantidad:</h4>
+            <input type="text" class="inputs" id="amount" />
+
+            <button class="btns btn btn-outline-info" id="cb" onclick="checkBalance()">Consultar Saldo</button>
+
+            <button class="btns btn btn-outline-success" id="dp" onclick="depositar()">Depositar</button>
+
+            <button class="btns btn btn-outline-warning" id="wd" onclick="retirar()">Retirar</button>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./login.js"></script>
+    </body>
+</html>
